@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h3>TEST</h3>
+    <p>TEST</p>
+
+</div>
+
+
+{% if işlem == 1 %}
+<p>Cevabımız 1....</p>
+{% elif işlem == 2 %}
+<p>Cevabımız 2....</p>
+{% else %}
+<p>Cevabımız boş...</p>
+{% endif %}
+    
+<ul>
+    
+    {% for article  in articles  %}
+        <li>Article ID: {{article.id}} - Title: {{article.title}} - Content: {{article.content}}</li>
+    {% endfor %}
+        
+</ul>
+
+{% endblock body %}
